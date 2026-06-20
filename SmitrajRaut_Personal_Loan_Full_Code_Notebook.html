@@ -13936,51 +13936,74 @@ weighted avg       0.99      0.99      0.99      3500
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Model-Insights"><strong>Model Insights</strong><a class="anchor-link" href="#Model-Insights">¶</a></h3><p>The pre-pruning model has higher accuracy (0.987714) compared to the post-pruning model (0.964286). Pre-pruning also has a higher precision (0.996552) but recall is lower (0.873112) than post-pruning (0.924471). Recommendation is to use the pre-pruning model based on accuracy, precision and F1 score. Things to consider if the post-pruning model would be used is that is has better recall but lower precision.</p>
+<h3 id="Model-Insights"><strong>Model Insights</strong><a class="anchor-link" href="#Model-Insights">¶</a></h3><p>The pre‑pruning model demonstrates stronger overall accuracy (0.9877) compared to the post‑pruning model (0.9643). Precision is also higher in the pre‑pruning case (0.9966), though recall is somewhat lower (0.8731 versus 0.9245). Considering accuracy, precision, and F1 score, the pre‑pruning approach is the recommended option. However, if recall is prioritized for instance, in scenarios where capturing more true positives is critical the post‑pruning model may be preferable despite its reduced precision.</p>
 <h3 id="Recommendations"><strong>Recommendations</strong><a class="anchor-link" href="#Recommendations">¶</a></h3><ol>
-<li><p><strong>Data Overall</strong>:</p>
+<li><p><strong>Data Overall</strong>:
+*Gather more information to understand why loan offers are declined for instance, whether applicants have prior defaults with other banks.</p>
 <ul>
-<li>Collect additional data to better understand why loans are not being accepted. Example, are people not accepting loans because they have defaulted with other banks?</li>
-<li>Collect satisfaction data for various services, eg. Online Banking, CD and Securities accounts, CC accounts.</li>
-<li>Collect payment data to see if customers are missing payments which would determine if offers are made to specific customers or an entire demographic.</li>
-<li>Collect loyalty time. How long has a customer been a member of the bank?</li>
+<li><p>Collect customer satisfaction feedback across services such as online banking, CDs, securities, and credit card accounts.</p>
+</li>
+<li><p>Track payment behavior to identify missed installments, which can guide whether offers should be tailored to individuals or broader groups.</p>
+</li>
+<li><p>Record customer tenure to assess loyalty and its influence on loan acceptance.</p>
+</li>
 </ul>
 </li>
 <li><p><strong>Feature Importance</strong>:</p>
 <ul>
-<li>Based on the current data there may be other features to add/indentify for other business strategies. Example, if customer demographics are important predictors then a marketing campaign or different services could be targeted.</li>
+<li>Explore additional variables that could strengthen business strategies. For example, if demographics prove to be strong predictors, marketing campaigns or service offerings can be customized accordingly.</li>
 </ul>
 </li>
 <li><p><strong>Customer Segmentation</strong>:</p>
 <ul>
-<li>Review the different ZIP codes and possibly offer targeted campaigns or special programs for higher value services (loans, CCs, etc.). These personal loans could be larger amounts than those on the lower end of income.</li>
-<li>Review customer accounts for those on the lower end and determine if offering lower loan amounts with reduced rates could bolster this demographic to accept personal loans.</li>
+<li><p>Examine ZIP code patterns to design localized campaigns or premium programs for high‑value services like loans and credit cards. Larger loan amounts could be targeted toward higher‑income segments.</p>
+</li>
+<li><p>For lower‑income customers, consider offering smaller loans at reduced interest rates to encourage adoption of personal loans.</p>
+</li>
 </ul>
 </li>
 <li><p><strong>Loyalty</strong>:</p>
 <ul>
-<li>Create a loyalty program with better rates and service fees.</li>
+<li>Develop loyalty initiatives that provide better interest rates and reduced service fees to reward long‑term customers.</li>
 </ul>
 </li>
 <li><p><strong>Business Processes</strong>:</p>
 <ul>
-<li>Use the model to automate parts of the personal loan approval process. By doing this it would reduce the time and effort required to make an offer and manual reviews of applicants. This can lead to faster loan processing and improved customer satisfaction.</li>
-<li>As part of automation implement stricter credit checks or offer smaller loan amounts to  customers to mitigate risk. Analysis of income and average CC information can be used to make determinations.</li>
-<li>Actively monitor the performance of the model. As new data is available ensure to update the model periodically to ensure it remains accurate and relevant.</li>
+<li>Implement automation in parts of the loan approval workflow to reduce manual effort, speed up processing, and improve customer satisfaction.</li>
+<li>As part of automation, apply stricter credit checks or adjust loan sizes to mitigate risk, using income and credit card data as key inputs.</li>
+<li>Continuously track model performance and refresh it with new data to maintain accuracy and relevance over time.</li>
 </ul>
 </li>
 </ol>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<hr/>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span><span class="s2">"SmitrajRaut_Personal_Loan_Full_Code_Notebook.ipynb"</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[NbConvertApp] Converting notebook SmitrajRaut_Personal_Loan_Full_Code_Notebook.ipynb to html
+[NbConvertApp] WARNING | Alternative text is missing on 47 image(s).
+[NbConvertApp] Writing 3701007 bytes to SmitrajRaut_Personal_Loan_Full_Code_Notebook.html
+</pre>
+</div>
 </div>
 </div>
 </div>
